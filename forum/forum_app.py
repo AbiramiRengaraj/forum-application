@@ -1,7 +1,6 @@
 # downloaded the flask with the help of pip install flask and then imported flask for building the  forum_application
 
 from flask import Flask, render_template, request, redirect, url_for
-
 forum_app = Flask(__name__)
 
 # testing purpose
@@ -35,7 +34,6 @@ def new_post():
         posts.append(new_post)
         return redirect(url_for('index'))
     return render_template('new_post.html')
-
 
 # update the comments with respect to the postid 
 @forum_app.route('/new_comment/<int:post_id>', methods=['POST'])
